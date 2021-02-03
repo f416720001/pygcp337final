@@ -1,6 +1,5 @@
 # 歌詞姬
-<img src="https://i.imgur.com/rYgOHu0.jpg" width="300">
-<img src="https://i.imgur.com/rYgOHu0.jpg" width="300">
+<img src="https://i.imgur.com/fas3vUi.jpg">
 
 # pygcp337final
 歌詞姬 - 337期 Python x GCP 雲端程式開發實戰
