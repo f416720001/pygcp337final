@@ -1,3 +1,5 @@
+# 歌詞姬
+<img src="https://i.imgur.com/rYgOHu0.jpg" width="300">
 <img src="https://i.imgur.com/rYgOHu0.jpg" width="300">
 
 # pygcp337final
