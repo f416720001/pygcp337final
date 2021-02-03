@@ -6,7 +6,7 @@ GCP網頁:
 https://gcp337final.df.r.appspot.com/
 
 Line BOT (兩個指令: 教學/查詢)
-![image](https://qr-official.line.me/sid/L/063dsjah.png)
+![image](https://i.imgur.com/YBKeoWK.png)
 
 ## 運行前
 LineBOT 申請
