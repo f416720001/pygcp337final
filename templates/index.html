@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌詞姬</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel=icon href="{{ url_for('static', filename='image/GeminiXiang.ico') }}" sizes="32x32 48x48" type="image/png">
+</head>
+<body>
+    <h1 class="logo">歌詞姬</h1>
+    
+    <form method="post" class="mid">
+        <input type="text" name="song_name" placeholder="輸入歌名" class="search_bar">
+        <input type="submit" name="send" value="送出" class="search_btn">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>歌詞</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel=icon href="{{ url_for('static', filename='image/GeminiXiang.ico') }}" sizes="32x32 48x48" type="image/png">
+</head>
+<body>
+    {% if error %}<p class=error><strong>Error:</strong> {{ error }}{% endif %}
+
+    {% if songs %}
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">⬅️</a>
+        <a>歌詞搜尋結果</a>
+    </div>
+    <table class="rwd-table">
+        <tr>
+            <th>歌名</th>
+            <th>歌手</th>
+            <th>專輯</th>
+        </tr>
+    {% for song in songs %}
+          <tr data-href="{{ song.link }}" class="rwd-table-tr">
+            <td data-th="歌名">{{ song.name }}</td>
+            <td data-th="歌手">{{ song.singer }}</td>
+            <td data-th="專輯">{{ song.album }}</td>
+          </tr>
+    {% endfor %}
+        </table>
+    {% endif %}
+    
+    {% if song_detail %}
+    <div class="navbar">
+        <a href="{{ url_for('index') }}">⬅️</a>
+        <a>{{ song_detail.name }} 歌詞</a>
+    </div>
+    <div class="song_info">
+        <h1>{{ song_detail.singer }} - {{ song_detail.name }}</h1>
+        <span>
+            {% if song_detail.lyricist %} {{ song_detail.lyricist }} | {% endif %}
+            {% if song_detail.composer %} {{ song_detail.composer }} | {% endif %}
+            {% if song_detail.arranger %} {{ song_detail.arranger }} | {% endif %}
+            <a href="{{ song_detail.url }}" target="_blank">魔鏡歌詞網</a>
+        </span>
+    </div>
+    <br>
+    <div class='mid'>
+        {% for string in song_detail.lyric %}
+        <p>{{ string }}</p>
+        {% endfor %}
+    </div>
+    {% endif%}
+</body>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    
+<script>
+ $(document).ready(function() {
+  $(".rwd-table > tbody > .rwd-table-tr").css('cursor', 'pointer').click(function() {
+   var link = $(this).data("href").trim();
+   if (link.length > 0)
+    window.document.location = link;
+   return false;
+  });
+ });
+</script>
+
+</html>
