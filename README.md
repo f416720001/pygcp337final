@@ -1,4 +1,5 @@
-![image](https://i.imgur.com/rYgOHu0.jpg | width=300)
+<img src="https://i.imgur.com/rYgOHu0.jpg" width="300">
+
 # pygcp337final
 歌詞姬 - 337期 Python x GCP 雲端程式開發實戰
 
