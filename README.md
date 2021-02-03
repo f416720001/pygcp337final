@@ -24,3 +24,9 @@ python main.py
 ```
 gcloud app deploy
 ```
+
+## 致謝
+[張佑成 老師](https://train.csie.ntu.edu.tw/train/teacher.php?id=100)的教學與指導  <br />
+江佰龍、Ray Lin兩個好夥伴  <br />
+zephyros0305/lyric_search 的魔鏡歌詞網爬蟲  <br />
+https://github.com/zephyros0305/lyric_search
